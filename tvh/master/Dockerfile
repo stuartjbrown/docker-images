@@ -67,11 +67,9 @@ ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ADD livestream.sh /livestream.sh
 RUN chmod a+x /livestream.sh
+
 ADD iptv_de.m3u /iptv_de.m3u
 RUN chmod a+r /iptv_de.m3u
-
-ADD tv_grab_eu_egon.conf /config/.xmltv/tv_grab_eu_egon.conf
-RUN chown hts:hts /config/.xmltv/tv_grab_eu_egon.conf
 
 # Default container settings
 VOLUME /config /recordings
